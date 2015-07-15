@@ -1,5 +1,5 @@
 ﻿+function () {
-    'user strict';
+    'use strict';
 
     angular
         .module('myApp')
@@ -12,19 +12,12 @@
             setDbName: function (name) {
                 return dbName = name;
             },
-            $get: ['$q', pouchDbProviderGetter]
+            $get: pouchDbProviderGetter
         };
 
         function pouchDbProviderGetter() {
             var db = null,
-                self = this,
                 result = {};
-
-
-            //function getKey(id, userId) {
-            //    userId = userId || authService.getUser().id;
-            //    return userId + '-' + dbName + '-' + id;
-            //}
 
             function checkDb() {
                 if (!db) {

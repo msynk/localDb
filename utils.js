@@ -1,6 +1,7 @@
 ﻿var utils = utils || {};
 
 +function (u) {
+    'use strict';
 
     u.handle = function utils$handle(err) {
         if (err.data) {
